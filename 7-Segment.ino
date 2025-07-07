@@ -232,7 +232,7 @@ void loop(){
   } else if(!brightBtn) wasBrightBtn=false;
 
   time_t now=time(nullptr); struct tm t; localtime_r(&now,&t);
-  if(currentMode<RAINBOW_MODE && t.tm_sec!=lastSec){
+  if(currentMode<=RAINBOW_MODE && t.tm_sec!=lastSec){
     lastSec=t.tm_sec; showTime(t,currentMode);
   }
 
