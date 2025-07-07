@@ -244,7 +244,7 @@ void loop(){
   if(interval){
     if(now - lastAutoTime >= interval){
       lastAutoTime = now;
-      autoIdx = (autoIdx+1)%RAINBOW_MODE;
+      autoIdx = (autoIdx+1)%AUTO_MODE_1;
       Serial.printf("Auto-cycle → %d – %s\n",autoIdx,modeName(autoIdx).c_str());
       showTime(t,autoIdx);
     }
